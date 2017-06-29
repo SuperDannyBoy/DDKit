@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DDGenderPickerView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="KJl-vT-hwc" customClass="DDGenderPickerView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="221"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj2-UE-YYL">
+                    <rect key="frame" x="238" y="0.0" width="82" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="82" id="4F1-Cy-Ja8"/>
+                        <constraint firstAttribute="height" constant="40" id="xkZ-Fr-LRt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="确认">
+                        <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="selectGender" destination="KJl-vT-hwc" eventType="touchUpInside" id="PTW-ZZ-PKq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzr-2a-cTz">
+                    <rect key="frame" x="0.0" y="0.0" width="82" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="82" id="4JI-Xc-S7I"/>
+                        <constraint firstAttribute="height" constant="40" id="ZaG-ob-a9Z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelPicker" destination="KJl-vT-hwc" eventType="touchUpInside" id="34t-ro-bEH"/>
+                    </connections>
+                </button>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqo-1z-TJx">
+                    <rect key="frame" x="0.0" y="30" width="320" height="191"/>
+                    <connections>
+                        <outlet property="dataSource" destination="KJl-vT-hwc" id="Pne-z7-7rN"/>
+                        <outlet property="delegate" destination="KJl-vT-hwc" id="KlL-1p-ck0"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Kzr-2a-cTz" firstAttribute="leading" secondItem="KJl-vT-hwc" secondAttribute="leading" id="1ze-kX-AVt"/>
+                <constraint firstAttribute="bottom" secondItem="bqo-1z-TJx" secondAttribute="bottom" id="Hlm-qn-1jS"/>
+                <constraint firstItem="bqo-1z-TJx" firstAttribute="top" secondItem="KJl-vT-hwc" secondAttribute="top" constant="30" id="I0R-gZ-DtL"/>
+                <constraint firstItem="Kzr-2a-cTz" firstAttribute="top" secondItem="KJl-vT-hwc" secondAttribute="top" id="Lbg-Lm-Hna"/>
+                <constraint firstItem="Aj2-UE-YYL" firstAttribute="top" secondItem="KJl-vT-hwc" secondAttribute="top" id="YUS-jZ-Zpa"/>
+                <constraint firstAttribute="trailing" secondItem="Aj2-UE-YYL" secondAttribute="trailing" id="dUb-uK-QRu"/>
+                <constraint firstAttribute="trailing" secondItem="bqo-1z-TJx" secondAttribute="trailing" id="ml2-0e-JDa"/>
+                <constraint firstItem="bqo-1z-TJx" firstAttribute="leading" secondItem="KJl-vT-hwc" secondAttribute="leading" id="z9o-lO-8MK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="genderPicker" destination="bqo-1z-TJx" id="kHd-ug-BYl"/>
+            </connections>
+            <point key="canvasLocation" x="663" y="317.5"/>
+        </view>
+    </objects>
+</document>
