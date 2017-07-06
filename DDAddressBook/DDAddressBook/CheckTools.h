@@ -1,10 +1,8 @@
 //
 //  CheckTools.h
-//  DLMacaoApp
 //
-//  Created by libiwu on 14-6-19.
-//  Copyright (c) 2014年 andy_wu. All rights reserved.
-//
+//  Created by SuperDanny on 15/3/27.
+//  Copyright © 2017年 SuperDanny ( http://SuperDanny.link/ ). All rights reserved.//
 //  逻辑检查工具
 
 #import <Foundation/Foundation.h>
