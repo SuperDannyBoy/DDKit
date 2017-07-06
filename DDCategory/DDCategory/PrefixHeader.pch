@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  BaccaratTrackingSystem
+//
+//  Created by SuperDanny on 2017/5/17.
+//  Copyright © 2017年 SuperDanny ( http://SuperDanny.link/ ). All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+
+///UITextField
+#import "UITextField+UI.h"
+
+///UIImage
+#import "UIImage+Addition.h"
+#import "UIImage+Rotate.h"
+
+///UIView
+#import "UIView+Common.h"
+#import "UIView+Additional.h"
+
+///NSString
+#import "NSString+Addition.h"
+#import "NSString+Calculate.h"
+#import "NSString+UUID.h"
+#import "NSString+Unicode.h"
+
+#endif /* PrefixHeader_pch */
