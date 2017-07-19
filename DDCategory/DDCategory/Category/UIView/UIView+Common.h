@@ -38,10 +38,12 @@ typedef NS_ENUM(NSInteger, EaseBlankPageType) {
 /**
  删除提示图标
  */
--(void)configRemoveInSuperView;
+- (void)configRemoveInSuperView;
+
 @end
 
 @interface EaseBlankPageView : UIView
+
 @property (strong, nonatomic) UIImageView *monkeyView;
 @property (strong, nonatomic) UILabel     *tipLabel;
 @property (strong, nonatomic) UIButton    *reloadButton;
@@ -49,10 +51,10 @@ typedef NS_ENUM(NSInteger, EaseBlankPageType) {
 @property (copy, nonatomic) void(^reloadButtonBlock)(id sender);
 @property (copy, nonatomic) void(^loadAndShowStatusBlock)();
 @property (copy, nonatomic) void(^clickButtonBlock)(EaseBlankPageType curType);
+
 - (void)configWithType:(EaseBlankPageType)blankPageType
                hasData:(BOOL)hasData
               hasError:(BOOL)hasError
      reloadButtonBlock:(void(^)(id sender))block;
-
 
 @end

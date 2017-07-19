@@ -11,19 +11,20 @@
 @implementation UIView (Additional)
 @dynamic borderWhich;
 
-- (void)setBorderWhich:(ZJViewBorder)borderWhich {
+#pragma mark - 局部分割线功能
+- (void)setBorderWhich:(DDViewBorder)borderWhich {
     CGFloat bh = self.layer.borderWidth;
     
-    if (borderWhich & ZJViewBorderBottom) {
+    if (borderWhich & DDViewBorderBottom) {
         [self addBottomBorder:self borderHeight:bh];
     }
-    if (borderWhich & ZJViewBorderLeft) {
+    if (borderWhich & DDViewBorderLeft) {
         [self addLeftBorder:self borderHeight:bh];
     }
-    if (borderWhich & ZJViewBorderRight) {
+    if (borderWhich & DDViewBorderRight) {
         [self addRightBorder:self borderHeight:bh];
     }
-    if (borderWhich & ZJViewBorderTop) {
+    if (borderWhich & DDViewBorderTop) {
         [self addTopBorder:self borderHeight:bh];
     }
     self.layer.borderWidth = 0;
@@ -83,6 +84,7 @@
     [vi.layer addSublayer:border];
 }
 
+#pragma mark - 阴影功能
 - (void)makeShadow {
     /*
      注意：
@@ -99,11 +101,108 @@
     self.layer.shadowOffset = CGSizeMake(0,2);
 }
 
-#pragma mark - 使用autolayout布局时，需要刷新约束才能获取到真实的frame
+#pragma mark 使用autolayout布局时，需要刷新约束才能获取到真实的frame
 - (void)updateFrame {
     [self updateConstraints];
     [self setNeedsLayout];
     [self layoutIfNeeded];
+}
+
+#pragma mark - 快速获取frame功能
+- (CGFloat)dd_x {
+    return CGRectGetMinX(self.frame);
+}
+
+- (void)setDd_x:(CGFloat)x {
+    CGRect frame = self.frame;
+    frame.origin.x = x;
+    self.frame = frame;
+}
+
+- (CGFloat)dd_y {
+    return CGRectGetMinY(self.frame);
+}
+
+- (void)setDd_y:(CGFloat)y {
+    CGRect frame = self.frame;
+    frame.origin.y = y;
+    self.frame = frame;
+}
+
+- (CGFloat)dd_max_x {
+    return CGRectGetMaxX(self.frame);
+}
+
+- (void)setDd_max_x:(CGFloat)right {
+    CGRect frame = self.frame;
+    frame.origin.x = right - frame.size.width;
+    self.frame = frame;
+}
+
+- (CGFloat)dd_max_y {
+    return CGRectGetMaxY(self.frame);
+}
+
+- (void)setDd_max_y:(CGFloat)bottom {
+    CGRect frame = self.frame;
+    frame.origin.y = bottom - frame.size.height;
+    self.frame = frame;
+}
+
+- (CGFloat)dd_w {
+    return CGRectGetWidth(self.frame);
+}
+
+- (void)setDd_w:(CGFloat)width {
+    CGRect frame = self.frame;
+    frame.size.width = width;
+    self.frame = frame;
+}
+
+- (CGFloat)dd_h {
+    return CGRectGetHeight(self.frame);
+}
+
+- (void)setDd_h:(CGFloat)height {
+    CGRect frame = self.frame;
+    frame.size.height = height;
+    self.frame = frame;
+}
+
+- (CGFloat)dd_centerX {
+    return CGRectGetMidX(self.frame);
+}
+
+- (void)setDd_centerX:(CGFloat)centerX {
+    self.center = CGPointMake(centerX, self.center.y);
+}
+
+- (CGFloat)dd_centerY {
+    return CGRectGetMidY(self.frame);
+}
+
+- (void)setDd_centerY:(CGFloat)centerY {
+    self.center = CGPointMake(self.center.x, centerY);
+}
+
+- (CGPoint)dd_origin {
+    return self.frame.origin;
+}
+
+- (void)setDd_origin:(CGPoint)origin {
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.frame = frame;
+}
+
+- (CGSize)dd_size {
+    return self.frame.size;
+}
+
+- (void)setDd_size:(CGSize)size {
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
 }
 
 @end
