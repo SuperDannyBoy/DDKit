@@ -19,4 +19,7 @@ typedef NS_ENUM(NSInteger, ZJViewBorder) {
 
 @property (nonatomic, assign) ZJViewBorder borderWhich;
 
+///加阴影效果
+- (void)makeShadow;
+
 @end

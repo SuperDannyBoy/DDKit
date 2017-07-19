@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF102F7B1F1F30DC008390BF /* UIButton+Colorful.m in Sources */ = {isa = PBXBuildFile; fileRef = DF102F7A1F1F30DC008390BF /* UIButton+Colorful.m */; };
 		DF8256141F0635DE0020444B /* UITextField+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8256131F0635DE0020444B /* UITextField+UI.m */; };
 		DF8546741F04E9AC00CC2840 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8546731F04E9AC00CC2840 /* main.m */; };
 		DF8546771F04E9AC00CC2840 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8546761F04E9AC00CC2840 /* AppDelegate.m */; };
@@ -28,9 +29,12 @@
 		DF8CD1021F0B3A6B00BE1D33 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DF8CD0FA1F0B3A6B00BE1D33 /* LICENSE */; };
 		DF8CD1031F0B3A6B00BE1D33 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DF8CD0FB1F0B3A6B00BE1D33 /* README.md */; };
 		DF8CD1041F0B3A6B00BE1D33 /* JNKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8CD0FE1F0B3A6B00BE1D33 /* JNKeychain.m */; };
+		DFD774321F1DF8A900B70906 /* UIButton+ImageTitleEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD774311F1DF8A900B70906 /* UIButton+ImageTitleEdge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF102F791F1F30DC008390BF /* UIButton+Colorful.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Colorful.h"; sourceTree = "<group>"; };
+		DF102F7A1F1F30DC008390BF /* UIButton+Colorful.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Colorful.m"; sourceTree = "<group>"; };
 		DF6C73971F04F7360063F559 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		DF8256121F0635DE0020444B /* UITextField+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+UI.h"; sourceTree = "<group>"; };
 		DF8256131F0635DE0020444B /* UITextField+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UI.m"; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		DF8CD0FB1F0B3A6B00BE1D33 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DF8CD0FD1F0B3A6B00BE1D33 /* JNKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNKeychain.h; sourceTree = "<group>"; };
 		DF8CD0FE1F0B3A6B00BE1D33 /* JNKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNKeychain.m; sourceTree = "<group>"; };
+		DFD774301F1DF8A900B70906 /* UIButton+ImageTitleEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleEdge.h"; sourceTree = "<group>"; };
+		DFD774311F1DF8A900B70906 /* UIButton+ImageTitleEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleEdge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 		DF8546891F04EB1600CC2840 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				DFD7742F1F1DF8A900B70906 /* UIButton */,
 				DF6C73981F04FA310063F559 /* UITextField */,
 				DF85468A1F04ECAA00CC2840 /* UIImage */,
 				DF85468F1F04ECAA00CC2840 /* UIView */,
@@ -224,6 +231,17 @@
 			path = JNKeychain;
 			sourceTree = "<group>";
 		};
+		DFD7742F1F1DF8A900B70906 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				DF102F791F1F30DC008390BF /* UIButton+Colorful.h */,
+				DF102F7A1F1F30DC008390BF /* UIButton+Colorful.m */,
+				DFD774301F1DF8A900B70906 /* UIButton+ImageTitleEdge.h */,
+				DFD774311F1DF8A900B70906 /* UIButton+ImageTitleEdge.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +325,8 @@
 				DF85469D1F04ECAA00CC2840 /* UIImage+Addition.m in Sources */,
 				DF8546771F04E9AC00CC2840 /* AppDelegate.m in Sources */,
 				DF8546A31F04ECAA00CC2840 /* NSString+Unicode.m in Sources */,
+				DFD774321F1DF8A900B70906 /* UIButton+ImageTitleEdge.m in Sources */,
+				DF102F7B1F1F30DC008390BF /* UIButton+Colorful.m in Sources */,
 				DF8546A11F04ECAA00CC2840 /* NSString+Addition.m in Sources */,
 				DF85469E1F04ECAA00CC2840 /* UIImage+Rotate.m in Sources */,
 				DF8CD0FF1F0B3A6B00BE1D33 /* FontInspector.m in Sources */,

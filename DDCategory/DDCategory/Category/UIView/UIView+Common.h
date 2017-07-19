@@ -1,7 +1,8 @@
 //
 //  UIView+Common.h
+//  DDCategory
 //
-//  Created by SuperDanny on 15/12/11.
+//  Created by SuperDanny on 15/8/6.
 //  Copyright © 2015年 SuperDanny ( http://SuperDanny.link/ ). All rights reserved.
 //
 

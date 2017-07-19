@@ -1,9 +1,9 @@
 //
 //  UIImage+Rotate.m
-//  IphoneMapSdkDemo
+//  DDCategory
 //
-//  Created by wzy on 14-11-14.
-//  Copyright (c) 2014年 Baidu. All rights reserved.
+//  Created by SuperDanny on 15/8/6.
+//  Copyright © 2015年 SuperDanny ( http://SuperDanny.link/ ). All rights reserved.
 //
 
 #import "UIImage+Rotate.h"

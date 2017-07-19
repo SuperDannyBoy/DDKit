@@ -1,9 +1,9 @@
 //
 //  UIImage+TestImage.h
-//  TreatHelper
+//  DDCategory
 //
-//  Created by 李必武 on 13-1-24.
-//  Copyright (c) 2013年 李必武. All rights reserved.
+//  Created by SuperDanny on 15/8/6.
+//  Copyright © 2015年 SuperDanny ( http://SuperDanny.link/ ). All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

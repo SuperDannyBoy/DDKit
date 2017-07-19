@@ -28,4 +28,7 @@
 #import "NSString+UUID.h"
 #import "NSString+Unicode.h"
 
+///UIButton
+#import "UIButton+ImageTitleEdge.h"
+
 #endif /* PrefixHeader_pch */
