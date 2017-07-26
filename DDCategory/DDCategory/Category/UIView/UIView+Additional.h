@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, DDViewBorder) {
-    DDViewBorderTop    = 1<<1,
-    DDViewBorderLeft   = 1<<2,
-    DDViewBorderBottom = 1<<3,
-    DDViewBorderRight  = 1<<4,
+    DDViewBorderTop    = 1<<1, ///< 顶部画线
+    DDViewBorderLeft   = 1<<2, ///< 左边画线
+    DDViewBorderBottom = 1<<3, ///< 底部画线
+    DDViewBorderRight  = 1<<4, ///< 右边画线
 };
 
 @interface UIView (Additional)
@@ -32,5 +32,25 @@ typedef NS_ENUM(NSInteger, DDViewBorder) {
 
 ///加阴影效果
 - (void)makeShadow;
+
+/**
+ 指定圆角位置
+
+ @code
+ corners类型：
+ 
+ typedef NS_OPTIONS(NSUInteger, UIRectCorner) {
+ UIRectCornerTopLeft     = 1 << 0,
+ UIRectCornerTopRight    = 1 << 1,
+ UIRectCornerBottomLeft  = 1 << 2,
+ UIRectCornerBottomRight = 1 << 3,
+ UIRectCornerAllCorners  = ~0UL
+ };
+ @endcode
+ 
+ @param cornerRadius 圆角半径(弧度)
+ @param corners 圆角方向
+ */
+- (void)makeCornerRadius:(CGFloat)cornerRadius byRoundingCorners:(UIRectCorner)corners;
 
 @end

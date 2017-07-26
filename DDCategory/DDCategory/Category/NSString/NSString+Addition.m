@@ -2,8 +2,8 @@
 //  NSString+Addition.m
 //  DDCategory
 //
-//  Created by libiwu on 15/4/23.
-//  Copyright (c) 2015年 SuperDanny ( http://SuperDanny.link/ ). All rights reserved.
+//  Created by SuperDanny on 15/4/8.
+//  Copyright © 2016年 SuperDanny ( http://SuperDanny.link/ ). All rights reserved.
 //
 
 #import "NSString+Addition.h"

@@ -108,6 +108,15 @@
     [self layoutIfNeeded];
 }
 
+#pragma mark - 指定圆角位置
+- (void)makeCornerRadius:(CGFloat)cornerRadius byRoundingCorners:(UIRectCorner)corners {
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+    CAShapeLayer *maskLayer = [CAShapeLayer new];
+    maskLayer.frame = self.bounds;
+    maskLayer.path = path.CGPath;
+    self.layer.mask = maskLayer;
+}
+
 #pragma mark - 快速获取frame功能
 - (CGFloat)dd_x {
     return CGRectGetMinX(self.frame);
